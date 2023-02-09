@@ -67,8 +67,8 @@
 		
 			//Subida de ficheros: debe crearse o cartafol "archivos_subidos" no cartafol raíz onde se atope este arquivo.
 			if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] === UPLOAD_ERR_OK) {
-				$archivoPathTemp = $_FILES['archivo']['archivoPathTemp'];
-				$nombreArchivo = $_FILES['archivo']['nombreArchivo'];
+				$archivoPathTemp = $_FILES['archivo']['tmp_name'];
+				$nombreArchivo = $_FILES['archivo']['name'];
 				
 				//echo "$archivoPathTemp<br/>$nombreArchivo";
 				
